@@ -1,0 +1,55 @@
+﻿  Array_main.cpp
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_array.h(73,34): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "Array_main.cpp")
+  
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_array.h(73,25): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "Array_main.cpp")
+  
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_sort.h(59,2): warning C4244: аргумент: преобразование "double" в "size_t", возможна потеря данных
+  (компиляция исходного файла "Array_main.cpp")
+  
+C:\Users\Наташа\Desktop\Array_main\Array_main\Array_main.cpp(35,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_search.h(136,14): warning C4244: инициализация: преобразование "TArray" в "size_t", возможна потеря данных
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_search.h(136,14): warning C4244:         with
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_search.h(136,14): warning C4244:         [
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_search.h(136,14): warning C4244:             TArray=double
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_search.h(136,14): warning C4244:         ]
+  (компиляция исходного файла "Array_main.cpp")
+  C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_search.h(136,14):
+  контекст создания экземпляра шаблона (сначала самый старый)
+  	C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_search.h(156,20):
+  	выполняется компиляция ссылки на экземпляр шаблон функции "__int64 Search_interpolation<double>(TArray *,size_t,TArray)"
+          with
+          [
+              TArray=double
+          ]
+  
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_sort.h(146,21): warning C4244: =: преобразование "TArray" в "int", возможна потеря данных
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_sort.h(146,21): warning C4244:         with
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_sort.h(146,21): warning C4244:         [
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_sort.h(146,21): warning C4244:             TArray=double
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_sort.h(146,21): warning C4244:         ]
+  (компиляция исходного файла "Array_main.cpp")
+  C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_sort.h(146,21):
+  контекст создания экземпляра шаблона (сначала самый старый)
+  	C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_sort.h(198,2):
+  	выполняется компиляция ссылки на экземпляр шаблон функции "void Sorting_merge<double>(TArray *,int,int)"
+          with
+          [
+              TArray=double
+          ]
+  	C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_sort.h(170,3):
+  	выполняется компиляция ссылки на экземпляр шаблон функции "void Merge<TArray>(TArray *,int,int)"
+          with
+          [
+              TArray=double
+          ]
+  
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_sort.h(148,22): warning C4244: =: преобразование "TArray" в "int", возможна потеря данных
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_sort.h(148,22): warning C4244:         with
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_sort.h(148,22): warning C4244:         [
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_sort.h(148,22): warning C4244:             TArray=double
+C:\Users\Наташа\Desktop\Array_main\Array_main\Modul_sort.h(148,22): warning C4244:         ]
+  (компиляция исходного файла "Array_main.cpp")
+  
+  Array_main.vcxproj -> C:\Users\Наташа\Desktop\Array_main\x64\Debug\Array_main.exe
