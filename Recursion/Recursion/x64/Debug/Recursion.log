@@ -1,0 +1,4 @@
+﻿  Recursion.cpp
+C:\Users\Наташа\Desktop\Recursion\Recursion\Recursion.cpp(38,1): warning C4715: rmultiply: значение возвращается не при всех путях выполнения
+C:\Users\Наташа\Desktop\Recursion\Recursion\Recursion.cpp(48,1): warning C4717: StackSizeMeasurement: рекурсия на всех путях выполнения, функция вызовет переполнение стека
+  Recursion.vcxproj -> C:\Users\Наташа\Desktop\Recursion\x64\Debug\Recursion.exe
