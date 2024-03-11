@@ -50,10 +50,6 @@ int** Memo_Array(int n, int m)
 /// \return процедура ничего не возвращает, просто выводит массив на экран
 void Screen_Array(int** a, size_t n, size_t m) 
 {
-    cout << "если a[n][m] = 0 - это кусок пирога" << endl;
-	cout << "если a[n][m] = 1 - этот кусок пирога съели" << endl;
-	cout << "если a[n][m] = 2 - это отравленный кусок пирога" << endl;
-	cout << endl;
 	for (size_t i = 1; i <= n; i++) // строк N
 	{
 		for (size_t j = 1; j <= m; j++) // столбцов M
@@ -61,6 +57,18 @@ void Screen_Array(int** a, size_t n, size_t m)
 		cout << endl;
 	}
 	cout << endl;
+}
+
+/// функция пожирания куска пирога
+/// \param a матрица - пирог
+/// \param n первое целое число 
+/// \param m второе целое число
+/// \param n x m размерность матрицы
+/// \return процедура ничего не возвращает, просто a[n][m] = 1 - этот кусок пирога съели
+void Eating_piece_сake(int** a, size_t n, size_t m) // Eating a piece of cake - кушать кусок пирога
+{
+	
+	
 }
 
 /// функция освобождение памяти двумерного массива N х М
@@ -91,16 +99,31 @@ int main()
     // «Rus» локализация произойдёт на русский язык
     setlocale(LC_ALL, "russian");
  
-    int n, m;
+    int n, m; // размерность матрицы
+	int k = 1, l = 1; // координаты пирога
     cout << "Введите два целых числа для деления пирога на части" << endl;
     // сохраняем их в m и n
     cout << "n = "; cin >> n;
     cout << "m = "; cin >> m;
     int** a = Memo_Array(n, m);
     Screen_Array(a, n, m);
-    cout << endl;
+    cout << "если a[n][m] = 0 - это кусок пирога" << endl;
+	cout << "если a[n][m] = 1 - этот кусок пирога съели" << endl;
+	cout << "если a[n][m] = 2 - это отравленный кусок пирога" << endl;
+	cout << endl;
+	// кушать кусок пирога
+	while (a[k][l] != 2)
+	{
+		cout << "Введите координаты куска пирога " << endl;
+		cout << "k = "; cin >> k;
+		cout << "l = "; cin >> l;
+		if (a[k][l] == 0) { a[k][l] = 1; cout << "Вы съели кусок пирога" << endl; Screen_Array(a, n, m); }
+		else if (a[k][l] == 1) { cout << "Кусок пирога давно съели. Возьмите другой." << endl; Screen_Array(a, n, m); }
+		else if (a[k][l] == 2) { cout << "Кусок пирога отравлен. ВЫ ПРОИГРАЛИ" << endl; Screen_Array(a, n, m); }
+	}
+	cout << endl;
+
     Test_StackSizeMeasurement();
     Del_Array(a, n, m);
-
     return 0;
 }
