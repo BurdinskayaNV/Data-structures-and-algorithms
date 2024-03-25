@@ -1,16 +1,3 @@
-﻿/// \file Analysis.cpp
-/// \brief Вариант 8
-/// \brief Задан массив размера n и число x.
-/// \brief Напишите программу, определяющую какой элемент наиболее близок к числу x.
-/// \brief Какой случай для алгоритма является наилучшим? Наихудшим? 
-/// \brief Результаты тестирования вывести в текстовый файл.
-/// \brief Количество сравнений в лучшем случае равно n - 1
-/// \brief 
-/// \author Бурдинская Наталья ВМК-22
-/// \date 04.03.2024
-
-#include "Analysis_modul.h" // вызов заголовочного файла Analysis_modul
-
 int main(int argc, char* argv[])
 {
     system("chcp 65001 > nul"); //подключение русского языка 
@@ -25,7 +12,7 @@ int main(int argc, char* argv[])
     // в нашем случае argc = 4
     // (argv[0] имя самого проекта, argv[1] размерность массива n,
     // argv[2] число x, argv[3] имя файла для ввода и сохранения данных)
-    string str_n, str_x, file_name;
+    string str_n, str_x;
     int k = argc;
     if (k == 1)
     {
@@ -68,11 +55,17 @@ int main(int argc, char* argv[])
         }
         file_name = argv[3];
     }
-    
-    //Test_Work_array();
-    //int* arr = new int[n] {1, 2, 3, 4};
-    int* arr = new int[n] {1, 2, 4, 3};
-    //int* arr = new int[n] {1, 3, 2, 4}; 
+    // Тестирование процедуры Work_array
+    Test_Work_array();
+    // открытие файла для записи
+    ofstream F(file_name);
+    F << "Начало " << endl;
+    F << endl;
+	F.close(); 
+	
+    int* arr1 = new int[n] {1, 2, 3, 4};
+    int* arr2 = new int[n] {1, 2, 4, 3};
+    int* arr3 = new int[n] {1, 3, 2, 4}; 
     //int* arr = new int[n] {1, 3, 4, 2};
     //int* arr = new int[n] {1, 4, 2, 3};
     //int* arr = new int[n] {1, 4, 3, 2};
@@ -81,11 +74,17 @@ int main(int argc, char* argv[])
     //int* arr = new int[n] {2, 3, 1, 4};
     //int* arr = new int[n] {2, 3, 4, 1};
     //int* arr = new int[n] {2, 4, 1, 3};
-    int near = find_nearby(arr, n, x, 10);
-    cout << "Ближайший элемент к X в массиве " << near << endl;
-    Test_Find_nearby();
-    
-
+	int near1 = find_nearby(Iarr, n, x, 10, file_name);
+	//double near2 = find_nearby(Darr, n, x, 10);
+    int near3 = find_nearby(arr1, n, x, 10, file_name);
+    int near4 = find_nearby(arr2, n, x, 10, file_name);
+    int near5 = find_nearby(arr3, n, x, 10, file_name);
+    cout << "Ближайший элемент к X в массиве Int  " << near1 << endl;
+	//cout << "Ближайший элемент к X в массиве Double " << near2 << endl;
+	cout << "Ближайший элемент к X в массиве arr1  " << near3 << endl;
+	cout << "Ближайший элемент к X в массиве arr2  " << near4 << endl;
+	cout << "Ближайший элемент к X в массиве arr3  " << near5 << endl;
+	
+    Test_Find_nearby(); // Тестирование процедуры поиска ближайшего числа
     return 0;
 }
-
